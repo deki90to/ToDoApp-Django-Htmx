@@ -1,0 +1,16 @@
+{% for post in posts %}
+  <h4 style="color: brown;">{{ post|truncatechars:500|safe }}</h4> 
+  <div class="d-grid gap-2">
+    <button 
+      class="btn btn-danger text-light"
+      hx-delete="{% url 'delete' post.pk %}" 
+      hx-swap="outerHTML" 
+      hx-target="#target" 
+      style="float: right;
+      box-shadow: 2px 2px 2px 1px darkred;
+      border-radius: 20px;">
+      <b> ✔ </b> 
+      {{ post.created }} 
+    </button> <br>
+  </div>
+{% endfor %}  

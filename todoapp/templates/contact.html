@@ -1,0 +1,24 @@
+{% extends 'base.html' %}
+{% block content %}
+
+{% include 'style.html' %}
+<style>
+  p {
+    text-align: left;
+  }
+</style>
+
+<div id="target">
+  {% include 'nav.html' %}
+  
+  <h3> First name / Last name </h3>
+  <p> Dejan Jovanovic </p> <hr>
+
+  <h3> LinkedIn </h3>
+  <p> https://www.linkedin.com/in/dejan-jovanovic-0341b519a/ </p> <hr>
+
+  <h3> Github</h3>
+  <p> https://github.com/deki90to </p>
+</div>
+© 2021 Dejan 
+{% endblock %}
