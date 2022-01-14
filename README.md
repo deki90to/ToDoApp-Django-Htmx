@@ -1,4 +1,4 @@
-- Dynamic To-Do Project using only Django and Htmx**
+Dynamic To-Do Project using only Django and Htmx
 
-Requirement:
-python -m pip install django-htmx
+-pip install django
+-python -m pip install django-htmx
