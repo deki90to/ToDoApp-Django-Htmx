@@ -13,7 +13,6 @@ def home(request):
     context = {'posts': posts}
     return render(request, 'home.html', context)
 
-
 def create(request):
     if request.method == 'POST':    
         post = Post.objects.create(
@@ -21,15 +20,12 @@ def create(request):
             )
         messages.success(request, 'Task Created')
         return redirect('home')
-
     return render(request, 'home.html')
-
 
 def delete(request, pk):
     Post.objects.filter(pk=pk).delete()
     messages.success(request, '✔ Done')
     return redirect('home')
-
 
 def contact(request):
     return render(request, 'contact.html')
